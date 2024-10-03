@@ -1,0 +1,32 @@
+.mainFile{
+    margin-left: 3rem;
+}
+
+.mainbox{
+    background-color: #fff;
+    margin: 0 5rem;
+    width: 80%;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: .1fr 1fr;
+    place-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.04);
+}
+
+.mainbox:first-child{
+    margin-top: 6rem;
+}
+
+.mainbox img{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin: 2rem;
+}
+
+.mainbox .textstyle{
+    display: grid;
+    height: 70%;
+    /* margin-left: 0; */
+}
