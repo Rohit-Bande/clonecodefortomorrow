@@ -12,8 +12,8 @@ const Mainfile = () => {
 
     const getMyData = async() => {
        try {
-        const res = await axios.get(API)
-        setMyData(res.data)
+          const res = await axios.get(API)
+          setMyData(res.data);
        } catch (error) {
         console.log(error);
        };
@@ -22,15 +22,19 @@ const Mainfile = () => {
     useEffect(() => {
         getMyData()
     }, [])
+
+
   return (
+    <>
     <div className={style.mainFile}>
     {
-        myData.map((item, id) => {
-           return (<Box title={item.title} body={item.body} key={id} />)
-        })
-    }
-      
+      (myData.map((item, id) => (
+                    <Box title={item.title} body={item.body} key={id} />
+                ))
+            )}
     </div>
+   
+    </>
   )
 }
 

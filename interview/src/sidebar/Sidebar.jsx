@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './Sidebarstyle.module.css'
 import image from "./images/medium.webp"
 import { TiFolderOpen } from "react-icons/ti";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Model from './Model';
 
-const Sidebar = () => {
+const Sidebar = ({onToggle}) => {
+
+  const [openModal, setOpenModal] = useState(false)
+  
+  const handleModal = () => {
+    setOpenModal(!openModal)
+  }
   return (
     <>
       <div className={style.mainSideBar}>
@@ -19,7 +26,8 @@ const Sidebar = () => {
 
              <div className={style.mytoggle}>
                   <p>this is toggle</p>
-                 <div className={style.togglebtn}>
+                  <div onClick={onToggle}>
+                 <div className={style.togglebtn} >
                  <button className={style.iconSpacing}>
                    <TiFolderOpen  />
                  </button>
@@ -27,14 +35,18 @@ const Sidebar = () => {
                    <GiHamburgerMenu  />
                  </button>
                  </div>
+                 </div>
              </div>
 
              <div className={style.openform}>
                   <p>this is toggle</p>
-                 <button className={style.mybtn}>
+                 <button className={style.mybtn} onClick={handleModal}>
                   Open form
                  </button>
              </div>
+
+           {openModal && <Model myModal={handleModal} />}
+
          </div>
       </div>
     </>

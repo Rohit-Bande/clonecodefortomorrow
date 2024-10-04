@@ -1,0 +1,33 @@
+
+
+.usercontainer{
+    width: 80%;
+    height: 90vh;
+    margin: 3rem 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.usercontainer .box{
+    background-color: white;
+    width: 18rem;
+    height: 26rem;
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(0, 0, 0, 0.04); 
+}
+
+.box h1{
+    margin-bottom: 2rem;
+}
+
+.box h2{
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.userimg img{
+    width: 100%;
+}

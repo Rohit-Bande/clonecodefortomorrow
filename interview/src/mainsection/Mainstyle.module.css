@@ -1,5 +1,8 @@
 .mainFile{
     margin-left: 3rem;
+    /* background-color: yellow; */
+    height: 100vh;
+    overflow: scroll;
 }
 
 .mainbox{
@@ -28,5 +31,12 @@
 .mainbox .textstyle{
     display: grid;
     height: 70%;
-    /* margin-left: 0; */
+}
+
+.loading{
+    font-size: 5rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
 }

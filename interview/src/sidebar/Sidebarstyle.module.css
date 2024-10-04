@@ -120,4 +120,17 @@ margin-bottom: 1rem;
     cursor: pointer;
 }
 
+/* modal  */
 
+.modalWrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(189, 189, 189, .5);
+}
+
+ .modalContainer{
+    position: fixed;
+}
